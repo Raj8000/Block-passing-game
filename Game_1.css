@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;     
+}
+body{
+    background-color:#626567 ;
+}
+#game{
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+    background-color:#2C3E50  ;
+    margin: auto;
+    box-sizing: border-box;
+}
+#character{
+    width: 100px;
+    height: 100px;
+    background-color:#979A9A   ;
+    position: relative;
+    top: 300px;
+    left: 0px;
+}
+
+.head{
+    padding: 30px;
+    text-align: center;
+    color: #F2F3F4 ;
+}
+
+#white{ /*If the block goes out of the game div then it will cover by white div*/
+    top: 500px;
+    z-index: 100;
+    position: absolute;
+    width: 300px;
+    height: 130px;
+    background-color: #626567 ;
+}
+
+#block{
+    width: 100px;
+    height: 100px;
+    top: 500px;
+    background-color: #F1948A;
+    position: relative;
+    animation: slide 1s infinite linear;
+}
+
+@keyframes slide{
+    /*Animation for the block that will slide down to the character*/
+    0%{top:-100px};/*Block will start from top*/
+    100%{top:500px};/*Block will slide down to bottom*/
+}
+
+#left, #right{
+    width:50%;
+    position: absolute;
+    height: 500px;
+}
+
+#right{
+    left: 50%;
+}
